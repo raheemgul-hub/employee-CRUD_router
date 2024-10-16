@@ -1,0 +1,104 @@
+/* General form container styling */
+.form-container {
+    background-color: #f9f9f9; /* Soft off-white background */
+    padding: 20px;
+    margin: 20px auto;
+    width: 40%; /* Adjust the width as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #e0e0e0; /* Light border */
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h3 {
+    color: #333333; /* Dark gray for text */
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #28a745; /* Green button for success */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .submit {
+    margin-top: 15px;
+    width: 100%; /* Full-width button for submit */
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Label and input styling */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555555; /* Medium gray for labels */
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Light green glow */
+  }
+  
+  /* Link styling */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Shadow and border customization for the form elements */
+  input, select {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  input:disabled, select:disabled {
+    background-color: #f0f0f0;
+    border-color: #e0e0e0;
+    color: #999999; /* Light gray for disabled fields */
+  }
+  
+.header h3{
+    color: white;
+}  

@@ -1,0 +1,53 @@
+.employee-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.employee-card {
+  background-color: white;
+  border: 1px solid #6a329f; /* Matches the purple border */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  text-align: left;
+}
+
+.icon-container {
+  font-size: 24px;
+  color: #6a329f;
+  margin-bottom: 15px;
+}
+
+.employee-details h1 {
+  font-size: 24px;
+  color: #6a329f; /* Matches purple */
+  border-bottom: 2px solid #6a329f;
+  padding-bottom: 10px;
+}
+
+.employee-details p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.employee-details strong {
+  color: #6a329f; /* Highlights */
+}
+
+.employee-details {
+  margin-top: 20px;
+}
+
+.fa-circle-arrow-left {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fa-circle-arrow-left:hover {
+  transform: translateX(-5px); /* Subtle hover effect */
+}

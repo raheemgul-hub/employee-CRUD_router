@@ -1,0 +1,42 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.nav-bar:hover {
+    background-color: #444;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.emp {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.emp:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+.emp i {
+    margin-right: 8px;
+}
