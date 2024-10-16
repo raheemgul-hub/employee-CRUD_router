@@ -65,7 +65,7 @@ function EMPLOYEE() {
           address,
           phone,
           department,
-         
+
         };
 
         id.current++;

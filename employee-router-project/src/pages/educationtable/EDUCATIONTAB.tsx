@@ -23,7 +23,7 @@ function EDUCATIONTAB() {
       }
     }
   }, []);
-  
+
   useEffect(() => {
     if (localStorage.getItem("emp")) {
       const e = localStorage.getItem("emp");
@@ -38,17 +38,17 @@ function EDUCATIONTAB() {
     }
   }, []);
 
-  const printemp=()=>{
-     let depname:String=''
-    empData.map((e:iEmployee)=>{
-      
+  const printemp = () => {
+    let depname: String = ''
+    empData.map((e: iEmployee) => {
+
       if (e.employeeId == employeeId) {
-        depname=   depname = e.firstname + ' ' + e.lastname;
+        depname = depname = e.firstname + ' ' + e.lastname;
       }
     })
     return depname
   }
-  
+
 
   //delete education//
   const deletebutton = (id: number) => {
@@ -67,7 +67,7 @@ function EDUCATIONTAB() {
     <div className="table-container">
       <>
         <div className="header">
-          <h2>Manage Education of { printemp()}</h2>
+          <h2>Manage Education of {printemp()}</h2>
           <Link to={"/educationform?employeeId=" + employeeId}>
             <button className="add-btn">
               <i className="fa-solid fa-plus"></i> ADD

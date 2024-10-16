@@ -27,7 +27,7 @@ function EDUCATION() {
       const array: IEducation[] = JSON.parse(storeddata);
       setEduArray(array);
       array.map((edu: IEducation) => {
-        if (edu.employeeId== idd) {
+        if (edu.employeeId == idd) {
           setEducationId(edu.educationId);
           setEducationName(edu.educationName);
           setEducationLevel(edu.educationLevel);
@@ -159,7 +159,7 @@ function EDUCATION() {
           />
         </div>
         <div>
-          <Link to={"/educationtable?id="+employeeId}>
+          <Link to={"/educationtable?id=" + employeeId}>
             <button
               className="btn btn-success submit"
               onClick={creatingemployees}

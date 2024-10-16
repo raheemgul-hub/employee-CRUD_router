@@ -28,7 +28,7 @@ function DETAIL() {
       const e = localStorage.getItem("education");
       if (e) {
         const emplist = JSON.parse(e);
-        emplist.map((education:IEducation) => {
+        emplist.map((education: IEducation) => {
           if (education.employeeId == empId) {
             setEducation(education);
           }
@@ -39,7 +39,7 @@ function DETAIL() {
 
   return (
     <div className="employee-list">
-      {employee!== undefined ? (
+      {employee !== undefined ? (
         <div className="employee-card">
           <Link to="/table">
             <div className="icon-container">
@@ -48,7 +48,7 @@ function DETAIL() {
           </Link>
           <div className="employee-details">
             <h1>
-             Details of {employee.firstname} {employee.lastname}
+              Details of {employee.firstname} {employee.lastname}
             </h1>
             <p>
               <strong>First-Name:</strong> {employee.firstname}
@@ -81,8 +81,8 @@ function DETAIL() {
               <strong>passing year:</strong> {education?.educationPassingYear}
             </p> */}
           </div>
-          <Link to={"/educationtable?id="+employee.employeeId} >
-          <button type="button" className="btn btn-info">Education</button>
+          <Link to={"/educationtable?id=" + employee.employeeId} >
+            <button type="button" className="btn btn-info">Education</button>
           </Link>
         </div>
       ) : (

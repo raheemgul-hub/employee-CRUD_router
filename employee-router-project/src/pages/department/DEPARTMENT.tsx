@@ -41,7 +41,7 @@ function DEPARTMENT() {
   //SAVE DEPARTMENT//
   const save = () => {
     if (name && code && description) {
-      if (getid==0) {
+      if (getid == 0) {
         const obj = {
           departmentId: id.current,
           name,
@@ -53,7 +53,7 @@ function DEPARTMENT() {
         setDepartment(newsave);
         localStorage.setItem("dep", JSON.stringify(newsave));
       }
-      if (getid > 0 ) {
+      if (getid > 0) {
         let index: any;
         department.map((d, i) => {
           if (d.departmentId == departmentId) {
@@ -71,7 +71,7 @@ function DEPARTMENT() {
       setCode("");
       setDescription("");
     }
-   
+
   };
 
   return (
@@ -84,7 +84,7 @@ function DEPARTMENT() {
             Update Department
           </h2>
           <Link to="/table">
-          <button className="back-btn">BACK</button>
+            <button className="back-btn">BACK</button>
           </Link>
         </div>
         <form className="employee-form">

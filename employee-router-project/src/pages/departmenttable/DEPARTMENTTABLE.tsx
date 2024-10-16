@@ -16,15 +16,9 @@ function DEPARTMENTTABLE() {
         }
       });
 
-    //   .current = lastId + 1;
+      //   .current = lastId + 1;
     }
   }, []);
-
-
-
-
-
-
 
 
   const deletebutton = (id: number) => {
