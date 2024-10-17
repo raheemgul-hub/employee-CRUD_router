@@ -7,6 +7,12 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
+body{
+ 
+        background: linear-gradient(to right, #6d4394, rgb(187, 132, 187)); /* Beautiful purple and white mix background */
+
+      }
+
 
 .nav-bar:hover {
     background-color: #444;

@@ -2,7 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { IEducation } from "../../interfaces/education";
 import { useEffect, useState } from "react";
 import { iEmployee } from "../../interfaces/employee";
-
+import "./educationtable.css"
 function EDUCATIONTAB() {
   const [education, setEducation] = useState<IEducation[]>([]);
   const [empData, setEmpData] = useState<iEmployee[]>([]);
@@ -105,8 +105,11 @@ function EDUCATIONTAB() {
                     ></i>
                   </td>
                 </tr>
-              ) : null // If employeeId doesn't match, render nothing
+              ) : (null)
+
+
             ))}
+
           </tbody>
 
         </table>

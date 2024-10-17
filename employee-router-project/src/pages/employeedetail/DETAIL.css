@@ -3,8 +3,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
+ 
 }
+
 
 .employee-card {
   background-color: white;
@@ -17,9 +18,11 @@
 }
 
 .icon-container {
-  font-size: 24px;
+  font-size: 30px;
   color: #6a329f;
   margin-bottom: 15px;
+  text-align: end;
+  margin-right: 20px;
 }
 
 .employee-details h1 {
