@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 function DEPARTMENTTABLE() {
   const [department, setDepartment] = useState<IDepartment[]>([]);
+
+  //get data from locala storage and save in department
   useEffect(() => {
     const storedData = localStorage.getItem("dep");
     if (storedData) {
@@ -20,7 +22,7 @@ function DEPARTMENTTABLE() {
     }
   }, []);
 
-
+//delete department
   const deletebutton = (id: number) => {
     let index: any;
     department.map((d, i) => {

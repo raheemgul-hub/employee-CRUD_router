@@ -9,7 +9,7 @@ function EDUCATIONTAB() {
   const [searchParams] = useSearchParams();
   const employeeId = Number(searchParams.get("id"));
 
-
+  //get education data fro local storage
   useEffect(() => {
     if (localStorage.getItem("education")) {
       const e = localStorage.getItem("education");
@@ -24,6 +24,8 @@ function EDUCATIONTAB() {
     }
   }, []);
 
+
+  //get employee data from local storage
   useEffect(() => {
     if (localStorage.getItem("emp")) {
       const e = localStorage.getItem("emp");
@@ -38,6 +40,8 @@ function EDUCATIONTAB() {
     }
   }, []);
 
+
+  //helper function for print the name in education table bar
   const printemp = () => {
     let depname: String = ''
     empData.map((e: iEmployee) => {
@@ -88,7 +92,7 @@ function EDUCATIONTAB() {
           <tbody className="table-group-divider">
 
             {education.map((e: IEducation) => (
-              e.employeeId === employeeId ? ( // Ternary condition to check employeeId
+              e.employeeId === employeeId ? (
                 <tr className="table" key={e.educationId}>
                   <td>{e.employeeId}</td>
                   <td>{e.educationName}</td>
@@ -99,8 +103,8 @@ function EDUCATIONTAB() {
                     <Link to={"/educationform?id=" + e.employeeId}>
                       <i className="fa-solid fa-pen action-icon1"></i>
                     </Link>
-                    <i
-                      className="fa-solid fa-trash action-icon2"
+                    
+                    <i className="fa-solid fa-trash action-icon2"
                       onClick={() => deletebutton(e.educationId)}
                     ></i>
                   </td>
@@ -111,7 +115,6 @@ function EDUCATIONTAB() {
             ))}
 
           </tbody>
-
         </table>
       </>
     </div>

@@ -12,6 +12,7 @@ import EDUCATIONTAB from "./pages/educationtable/EDUCATIONTAB";
 
 function App() {
   return (
+    //router for moving one page to another page
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>

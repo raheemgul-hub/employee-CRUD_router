@@ -23,6 +23,8 @@ function EMPLOYEE() {
       setDepartmentData(old_data);
     }
   }, []);
+
+
   //get employee old data from local storage//
   useEffect(() => {
     const storedData = localStorage.getItem("emp");
@@ -53,6 +55,7 @@ function EMPLOYEE() {
     }
   }, []);
 
+
   const save = () => {
     //new-save//
     if (firstname && lastname && email && address && phone) {
@@ -72,8 +75,9 @@ function EMPLOYEE() {
         const newsave = [...employee, obj];
         setEmployee(newsave);
         localStorage.setItem("emp", JSON.stringify(newsave));
-        //edit//
+      
       }
+        //edit//
       if (getid > 0) {
         let index: any;
         employee.map((e, i) => {
@@ -93,6 +97,7 @@ function EMPLOYEE() {
       resetForm();
     }
   };
+
   //clear inputs after saving//
   const resetForm = () => {
     setFirstname("");
@@ -102,6 +107,7 @@ function EMPLOYEE() {
     setPhone("");
     setDepartment("");
   };
+  
 
   return (
     <div className="main">

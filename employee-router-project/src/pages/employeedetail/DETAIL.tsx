@@ -7,7 +7,7 @@ function DETAIL() {
   const [employee, setEmployee] = useState<iEmployee>();
   const [education, setEducation] = useState<IEducation>();
   const [queryprams] = useSearchParams();
-
+  //get employee data from local storage and for details
   useEffect(() => {
     const empId = Number(queryprams.get("id"));
     if (localStorage.getItem("emp")) {
@@ -22,6 +22,8 @@ function DETAIL() {
       }
     }
   }, []);
+  
+    //get employee data from local storage and for details
   useEffect(() => {
     const empId = Number(queryprams.get("employeeId"));
     if (localStorage.getItem("education")) {

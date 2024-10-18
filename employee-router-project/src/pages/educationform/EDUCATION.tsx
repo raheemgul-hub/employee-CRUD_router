@@ -70,7 +70,9 @@ function EDUCATION() {
 
         localStorage.setItem("education", JSON.stringify(newobj));
       }
+
     }
+
 
     //For Editing Employee
     else if (idd > 0) {
@@ -90,8 +92,8 @@ function EDUCATION() {
 
       localStorage.setItem("education", JSON.stringify(eduarray));
     }
-  };
 
+  }
   return (
 
     <div>

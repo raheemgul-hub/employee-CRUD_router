@@ -3,26 +3,28 @@ import { iEmployee } from "../../interfaces/employee";
 import { useEffect, useState } from "react";
 
 function TABLE() {
-    const [employee,setEmployee]=useState<iEmployee[]>([])
-    useEffect(() => {
-        const storedData = localStorage.getItem("emp");
-        if (storedData) {
-          const oldData: iEmployee[] = JSON.parse(storedData);
-          setEmployee(oldData);
-          let lastId = 0;
-          oldData.map((o: iEmployee) => {
-            if (o.employeeId > lastId) {
-              lastId = o.employeeId;
-            }
-          });
-    
-        //   .current = lastId + 1;
-        }
-      }, []);
- 
+  const [employee, setEmployee] = useState<iEmployee[]>([])
 
-//delete employEE//
-const deletebutton = (id: number) => {
+  //get data from local storage for the employee table
+  useEffect(() => {
+    const storedData = localStorage.getItem("emp");
+    if (storedData) {
+      const oldData: iEmployee[] = JSON.parse(storedData);
+      setEmployee(oldData);
+      let lastId = 0;
+      oldData.map((o: iEmployee) => {
+        if (o.employeeId > lastId) {
+          lastId = o.employeeId;
+        }
+      });
+
+      //   .current = lastId + 1;
+    }
+  }, []);
+
+
+  //delete employEE//
+  const deletebutton = (id: number) => {
     let index: any;
     employee.map((e, i) => {
       if (e.employeeId === id) {
@@ -39,16 +41,16 @@ const deletebutton = (id: number) => {
       <>
         <div className="header">
           <h2>Manage Employees</h2>
-        <Link to="/employee">
-        <button className="add-btn">
-            <i className="fa-solid fa-plus"></i> ADD
-          </button>
-        </Link>
-        <Link to='/departmenttable'>
-        <button className="add-btn">
-            <i className="fa-solid fa-plus"></i> Department
-          </button>
-        </Link>
+          <Link to="/employee">
+            <button className="add-btn">
+              <i className="fa-solid fa-plus"></i> ADD
+            </button>
+          </Link>
+          <Link to='/departmenttable'>
+            <button className="add-btn">
+              <i className="fa-solid fa-plus"></i> Department
+            </button>
+          </Link>
         </div>
         <table className="employee-table table table-bordered">
           <thead>
@@ -74,11 +76,11 @@ const deletebutton = (id: number) => {
                 <td>{e.phone}</td>
                 <td>{e.department}</td>
                 <td className="actions">
-               <Link to={"/employee?id="+e.employeeId}>
-               <i
-                    className="fa-solid fa-pen action-icon1"
-                  ></i>
-               </Link>
+                  <Link to={"/employee?id=" + e.employeeId}>
+                    <i
+                      className="fa-solid fa-pen action-icon1"
+                    ></i>
+                  </Link>
                   <i
                     className="fa-solid fa-trash action-icon2"
                     onClick={() => deletebutton(e.employeeId)}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './FRONTPAGE.css'
 function FRONTPAGE() {
   return (
+    // front page 
     <div className="home-container">
       <div className="home-content">
         <h1 className="animated-text">Welcome to Employee Management System</h1>
